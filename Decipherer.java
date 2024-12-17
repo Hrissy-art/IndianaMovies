@@ -13,7 +13,7 @@ public class Decipherer {
     public static String decipher(String message){
         int keyNumber = message.length() / 2;
         String subMessage = message.substring(5,5 + keyNumber);
-String replaceMessage = subMessage.replaceAll("@#?", " ");
+String replaceMessage = subMessage.replaceAll("@#?", " ").replace("?", "");
 String reversedMessage = new StringBuilder(replaceMessage).reverse().toString();
 return reversedMessage;
 
